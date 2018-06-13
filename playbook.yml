@@ -22,4 +22,10 @@
       - VirtualBox
       - opera
       - 1password
+      - lastpass
       #- microsoft-office
+
+  - name: Install Media Packages
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - kodi
