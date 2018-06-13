@@ -1,0 +1,24 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+
+  - name: Install apps with homebrew
+    homebrew: name={{ item }} state=present
+    with_items:
+      - wget
+      - git
+
+  - name: Install cask packages
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - iterm2
+      - google-chrome
+      - dropbox
+      - webstorm
+      - intellij-idea
+      - pycharm-ce
+      - docker
+      - minikube
+      - VirtualBox
+      - opera
+      #- microsoft-office
