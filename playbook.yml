@@ -2,13 +2,23 @@
 - hosts: 127.0.0.1
   tasks:
 
+#  - name: Update Brew and Upgrade Packages
+#    homebrew:
+#      update_homebrew: yes
+#      upgrade_all: yes
+
   - name: Install apps with homebrew
     homebrew: name={{ item }} state=present
     with_items:
       - wget
       - git
+      - kubectl
+      - kubernetes-helm
+      - zsh
+      - zsh-completions
+      - p7zip
 
-  - name: Install cask packages
+  - name: Install cask packagses
     homebrew_cask: name={{ item }} state=present
     with_items:
       - iterm2
@@ -21,9 +31,13 @@
       - minikube
       - VirtualBox
       - opera
-      - 1password
+      #- 1password
       - lastpass
       - microsoft-office
+      - xmind
+      - minikube
+      - ngrok
+      - anaconda
 
   - name: Install Media Packages
     homebrew_cask: name={{ item }} state=present

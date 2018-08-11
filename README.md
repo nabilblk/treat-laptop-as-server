@@ -2,4 +2,5 @@
 
 ```
 ansible-playbook playbook.yml
-```    
+```
+
