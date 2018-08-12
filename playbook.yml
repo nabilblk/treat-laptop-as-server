@@ -43,3 +43,8 @@
     homebrew_cask: name={{ item }} state=present
     with_items:
       - kodi
+
+  - name: Install Pip Packages
+    pip: name={{ item }} state=present
+    with_items:
+      - glances
