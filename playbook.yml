@@ -17,6 +17,9 @@
       - zsh
       - zsh-completions
       - p7zip
+      - node
+      - go
+      - jq
 
   - name: Install cask packagses
     homebrew_cask: name={{ item }} state=present
@@ -38,6 +41,9 @@
       - minikube
       - ngrok
       - anaconda
+      - java
+      - slack
+      - tunnelblick
 
   - name: Install Media Packages
     homebrew_cask: name={{ item }} state=present
@@ -48,3 +54,4 @@
     pip: name={{ item }} state=present
     with_items:
       - glances
+      - apache-airflow
