@@ -21,7 +21,7 @@
       - go
       - jq
 
-  - name: Install cask packagses
+  - name: Install Base Cask packagses
     homebrew_cask: name={{ item }} state=present
     with_items:
       - iterm2
@@ -44,6 +44,12 @@
       - java
       - slack
       - tunnelblick
+      - atom
+
+  - name: Install GTD Cask packagses
+    homebrew_cask: name={{ item }} state=present
+    with_items:
+      - todoist
 
   - name: Install Media Packages
     homebrew_cask: name={{ item }} state=present
