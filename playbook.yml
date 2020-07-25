@@ -41,6 +41,7 @@
       - figma
       - evernote
       - google-drive-file-stream
+      - microsoft-office
 
   - name: Install GTD Cask packagses
     homebrew_cask: name={{ item }} state=present
