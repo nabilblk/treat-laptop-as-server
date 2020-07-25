@@ -13,13 +13,10 @@
       - wget
       - git
       - kubectl
-      - kubernetes-helm
-      - zsh
-      - zsh-completions
-      - p7zip
       - node
       - go
       - jq
+      - k3d
 
   - name: Install Base Cask packagses
     homebrew_cask: name={{ item }} state=present
@@ -31,33 +28,27 @@
       - intellij-idea
       - pycharm-ce
       - docker
-      - minikube
-      - VirtualBox
-      - opera
-      #- 1password
-      - lastpass
-      - microsoft-office
-      - xmind
-      - minikube
-      - ngrok
       - anaconda
       - java
       - slack
-      - tunnelblick
       - atom
+      - whatsapp
+      - microsoft-teams
+      - little-snitch
+      - visual-studio-code
+      - android-studio
+      - notion
+      - figma
+      - evernote
+      - google-drive-file-stream
 
   - name: Install GTD Cask packagses
     homebrew_cask: name={{ item }} state=present
     with_items:
       - todoist
 
-  - name: Install Media Packages
-    homebrew_cask: name={{ item }} state=present
-    with_items:
-      - kodi
 
   - name: Install Pip Packages
     pip: name={{ item }} state=present
     with_items:
       - glances
-      - apache-airflow
