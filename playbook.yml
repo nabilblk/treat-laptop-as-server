@@ -7,17 +7,32 @@
 #      update_homebrew: yes
 #      upgrade_all: yes
 
-  - name: Install apps with homebrew
+  - name: Install Core tools with homebrew
     homebrew: name={{ item }} state=present
     with_items:
       - wget
       - git
-      - kubectl
       - node
       - go
       - jq
-      - k3d
+      - zsh
+      - terraform
+      - watch
+      - yarn
+      - nvm
 
+  - name: Install K8S tools with homebrew
+    homebrew: name={{ item }} state=present
+    with_items:
+      - kubectl
+      - k3d
+      - helm
+      - knative/client/kn
+      - ubuntu/microk8s/microk8s
+      - derailed/k9s/k9s
+      - minikube
+      - crc
+      
   - name: Install Base Cask packagses
     homebrew_cask: name={{ item }} state=present
     with_items:
@@ -42,14 +57,6 @@
       - evernote
       - google-drive-file-stream
       - microsoft-office
-
-  - name: Install GTD Cask packagses
-    homebrew_cask: name={{ item }} state=present
-    with_items:
-      - todoist
-
-
-  - name: Install Pip Packages
-    pip: name={{ item }} state=present
-    with_items:
-      - glances
+      - sketch
+      - spotify
+      - coconutbattery
