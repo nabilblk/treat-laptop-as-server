@@ -17,7 +17,6 @@
       - jq
       - zsh
       - terraform
-      - watch
       - yarn
       - nvm
 
@@ -32,6 +31,7 @@
       - derailed/k9s/k9s
       - minikube
       - crc
+      - skaffold
       
   - name: Install Base Cask packagses
     homebrew_cask: name={{ item }} state=present
