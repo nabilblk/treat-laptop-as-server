@@ -26,12 +26,7 @@
       - kubectl
       - k3d
       - helm
-      - knative/client/kn
-      - ubuntu/microk8s/microk8s
       - derailed/k9s/k9s
-      - minikube
-      - crc
-      - skaffold
       
   - name: Install Base Cask packagses
     homebrew_cask: name={{ item }} state=present
@@ -46,7 +41,6 @@
       - anaconda
       - java
       - slack
-      - atom
       - whatsapp
       - microsoft-teams
       - little-snitch
@@ -54,9 +48,6 @@
       - android-studio
       - notion
       - figma
-      - evernote
       - google-drive-file-stream
       - microsoft-office
-      - sketch
       - spotify
-      - coconutbattery
