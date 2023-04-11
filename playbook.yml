@@ -39,7 +39,7 @@
       - pycharm-ce
       - docker
       - anaconda
-      - java
+      #- java
       - slack
       - whatsapp
       - microsoft-teams
@@ -52,3 +52,7 @@
       - microsoft-office
       - spotify
       - fig 
+      - discord
+      - todoist
+      - lens
+      - google-drive-file-stream
